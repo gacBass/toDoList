@@ -7,5 +7,6 @@
   "cancel": "Cancel",
   "no_tasks": "No tasks available",
   "notes": "Notes",
-  "enter_note_placeholder": "Enter your note here"
+  "enter_note_placeholder": "Enter your note here",
+  "reset": "Reset"
 }
