@@ -12,8 +12,8 @@ const LanguageToggle = () => {
   // Show icon on mobile, text on desktop
   const isMobile = window.innerWidth <= 600;
   const label = isMobile
-    ? (i18n.language === 'en' ? '🇪🇸' : '🇬🇧')
-    : (i18n.language === 'en' ? 'Español' : 'English');
+    ? (i18n.language === 'en' ? '🇬🇧' : '🇪🇸')
+    : (i18n.language === 'en' ? 'English' : 'Español');
 
   return (
     <div className="language-toggle-wrapper">
