@@ -6,16 +6,40 @@
 }
 
 .language-toggle-btn {
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
   border: none;
   background: #2196f3;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  min-width: 44px;
+  min-height: 44px;
 }
 
-.language-toggle-btn:hover {
+.language-toggle-btn:hover,
+.language-toggle-btn:focus {
   background: #1769aa;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .language-toggle-wrapper {
+    top: 8px;
+    right: 8px;
+  }
+  .language-toggle-btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
