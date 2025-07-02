@@ -6,7 +6,7 @@ import './index.css';
 const LOCAL_STORAGE_KEY = "some_value";
 
 
-function MainApp() {
+function MainToDo() {
 
     const [tasks, setTasks] = useState([]);
     const isFirstRender = useRef(true);
@@ -73,4 +73,4 @@ function MainApp() {
 
 }
 
-export default MainApp;
+export default MainToDo;

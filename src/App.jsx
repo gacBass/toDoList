@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import MainApp from './mainApp'
+import MainToDo from './MainToDo'
 
 function App() {
 
-  return <MainApp />
+  return <MainToDo />
   
 }
 
