@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import BoxView from './components/BoxView.jsx';
 import ShowSth from './components/ShowSth.jsx';
 import LanguageToggle from './components/LanguageToggle.jsx';
+import Timer from './components/Timer.jsx';
 import { useTranslation } from 'react-i18next';
 
 import './index.css';
@@ -61,6 +62,7 @@ function MainToDo() {
 
         <>
             <LanguageToggle />
+            <Timer />
             <h1 className="titulo">{t('title')}</h1>
 
             <BoxView onAddBox={handleAddBox} />

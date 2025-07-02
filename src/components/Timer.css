@@ -1,0 +1,12 @@
+.timer-top-right {
+  position: absolute;
+  top: 16px;
+  left: 80px; /* adjust if you want space from language toggle */
+  background: #fff;
+  color: #2196f3;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  z-index: 1000;
+}
