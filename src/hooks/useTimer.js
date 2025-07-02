@@ -1,17 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
-export function useTimer(start = 0, intervalMs = 1000) {
+export function useTimer(start = 0) {
   const [seconds, setSeconds] = useState(start);
-  const intervalRef = useRef(null);
+  const intervalRef = useRef();
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setSeconds(s => s + 1);
-    }, intervalMs);
+    }, 1000);
     return () => clearInterval(intervalRef.current);
-  }, [intervalMs]);
+  }, []);
 
-  // Optionally, you can add pause/resume/reset logic here
+  const reset = useCallback(() => setSeconds(0), []);
 
-  return seconds;
+  return [seconds, reset];
 }
