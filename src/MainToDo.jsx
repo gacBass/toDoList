@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import BoxView from './components/BoxView.jsx';
 import ShowSth from './components/ShowSth.jsx';
+import LanguageToggle from './components/LanguageToggle.jsx';
+import { useTranslation } from 'react-i18next';
+
 import './index.css';
 
 const LOCAL_STORAGE_KEY = "some_value";
 
-
 function MainToDo() {
+
 
     const [tasks, setTasks] = useState([]);
     const isFirstRender = useRef(true);
-
+    const { t } = useTranslation();
 
     useEffect(() => {
         const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -57,7 +60,8 @@ function MainToDo() {
     return (
 
         <>
-            <h1 className="titulo"> ToDo List </h1>
+            <LanguageToggle />
+            <h1 className="titulo">{t('title')}</h1>
 
             <BoxView onAddBox={handleAddBox} />
             <ShowSth sth={tasks} onRemoveTask={removeTask} editTask={editTask} />

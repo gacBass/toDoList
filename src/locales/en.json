@@ -1,0 +1,11 @@
+{
+  "title": "ToDo List",
+  "add_task": "Add task",
+  "edit": "Edit",
+  "remove_task": "Remove task",
+  "save": "Save",
+  "cancel": "Cancel",
+  "no_tasks": "No tasks available",
+  "notes": "Notes",
+  "enter_note_placeholder": "Enter your note here"
+}

@@ -1,8 +1,10 @@
 import './show.css';
 import PropTypes from 'prop-types';
 import { useEditTask } from '../hooks/useEditTask';
+import { useTranslation } from 'react-i18next'; // Add this import
 
 const ShowSth = ({ sth, onRemoveTask, editTask }) => {
+    const { t } = useTranslation(); // Add this line
     const {
         editingId,
         editValue,
@@ -13,12 +15,12 @@ const ShowSth = ({ sth, onRemoveTask, editTask }) => {
     } = useEditTask(editTask);
 
     if (!sth || sth.length === 0) {
-        return <div className='no-tasks'>No tasks available</div>;
+        return <div className='no-tasks'>{t('no_tasks')}</div>; // Use translation
     }
 
     return (
         <div className='show-container'>
-            <h2>Notes</h2>
+            <h2>{t('notes')}</h2>
             <ul>
                 {sth.map(item => (
                     <li className="task-item" key={item.id}>
@@ -30,15 +32,15 @@ const ShowSth = ({ sth, onRemoveTask, editTask }) => {
                                     onChange={handleEditChange}
                                     autoFocus
                                 />
-                                <button className='save-button' onClick={() => handleEditSave(item.id)}>Save</button>
-                                <button className='cancel-button' onClick={handleEditCancel}>Cancel</button>
+                                <button className='save-button' onClick={() => handleEditSave(item.id)}>{t('save')}</button>
+                                <button className='cancel-button' onClick={handleEditCancel}>{t('cancel')}</button>
                             </>
                         ) : (
                             <>
                                 <span className="task-text">{item.title}</span>
                                 <span className="button-group">
-                                    <button className='edit-button' onClick={() => handleEditClick(item.id, item.title)}>Edit</button>
-                                    <button className='remove-button' onClick={() => onRemoveTask(item.id)}>Remove Task</button>
+                                    <button className='edit-button' onClick={() => handleEditClick(item.id, item.title)}>{t('edit')}</button>
+                                    <button className='remove-button' onClick={() => onRemoveTask(item.id)}>{t('remove_task')}</button>
                                 </span>
                             </>
                         )}

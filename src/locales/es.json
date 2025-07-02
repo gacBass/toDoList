@@ -1,0 +1,11 @@
+{
+  "title": "Lista de Tareas",
+  "add_task": "Agregar tarea",
+  "edit": "Editar",
+  "remove_task": "Eliminar tarea",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "no_tasks": "No hay tareas disponibles",
+  "notes": "Notas",
+  "enter_note_placeholder": "Escribe tu nota aquí"
+}
