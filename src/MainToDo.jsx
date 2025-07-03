@@ -3,6 +3,7 @@ import BoxView from './components/BoxView.jsx';
 import ShowSth from './components/ShowSth.jsx';
 import LanguageToggle from './components/LanguageToggle.jsx';
 import Timer from './components/Timer.jsx';
+// import DolarHoy from './components/DolarHoy';
 import { useTranslation } from 'react-i18next';
 
 import './index.css';
@@ -61,13 +62,12 @@ function MainToDo() {
     return (
 
         <>
+            {/* <DolarHoy /> */}
             <LanguageToggle />
             <Timer />
             <h1 className="titulo">{t('title')}</h1>
-
             <BoxView onAddBox={handleAddBox} />
             <ShowSth sth={tasks} onRemoveTask={removeTask} editTask={editTask} />
-
         </>
 
 
